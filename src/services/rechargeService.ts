@@ -1,7 +1,7 @@
-import * as rechargeRepository from '../repositories/rechargeRepository.js';
-import * as phoneRepository from '../repositories/phoneRepository.js';
-import { CreateRechargeData, Recharge } from '../protocols/index.js';
-import { AppError } from '../middlewares/errorHandler.js';
+import * as rechargeRepository from '../repositories/rechargeRepository';
+import * as phoneRepository from '../repositories/phoneRepository';
+import { CreateRechargeData, Recharge } from '../protocols/index';
+import { AppError } from '../middlewares/errorHandler';
 
 export async function createRecharge(rechargeData: CreateRechargeData): Promise<Recharge> {
   // Verificar se o telefone existe

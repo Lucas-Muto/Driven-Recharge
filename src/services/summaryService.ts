@@ -1,6 +1,6 @@
-import * as phoneRepository from '../repositories/phoneRepository.js';
-import * as rechargeRepository from '../repositories/rechargeRepository.js';
-import { Summary, PhoneWithCarrier } from '../protocols/index.js';
+import * as phoneRepository from '../repositories/phoneRepository';
+import * as rechargeRepository from '../repositories/rechargeRepository';
+import { Summary, PhoneWithCarrier } from '../protocols/index';
 
 export async function getSummaryByDocument(document: string): Promise<Summary> {
   // Buscar todos os telefones do CPF

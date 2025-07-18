@@ -2,10 +2,10 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
-import { errorHandler } from './middlewares/errorHandler.js';
-import phoneRoutes from './routes/phoneRoutes.js';
-import rechargeRoutes from './routes/rechargeRoutes.js';
-import summaryRoutes from './routes/summaryRoutes.js';
+import { errorHandler } from './middlewares/errorHandler';
+import phoneRoutes from './routes/phoneRoutes';
+import rechargeRoutes from './routes/rechargeRoutes';
+import summaryRoutes from './routes/summaryRoutes';
 
 dotenv.config();
 

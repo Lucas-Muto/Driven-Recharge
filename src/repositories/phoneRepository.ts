@@ -1,5 +1,5 @@
-import database from '../config/database.js';
-import { Phone, CreatePhoneData, PhoneWithCarrier } from '../protocols/index.js';
+import database from '../config/database';
+import { Phone, CreatePhoneData, PhoneWithCarrier } from '../protocols/index';
 
 export async function createPhone(phoneData: CreatePhoneData): Promise<Phone> {
   const query = `

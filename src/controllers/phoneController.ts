@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
-import * as phoneService from '../services/phoneService.js';
-import { CreatePhoneData } from '../protocols/index.js';
+import * as phoneService from '../services/phoneService';
+import { CreatePhoneData } from '../protocols/index';
 
 export async function createPhone(req: Request, res: Response, next: NextFunction) {
   try {

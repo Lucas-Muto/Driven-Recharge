@@ -1,6 +1,6 @@
-import * as phoneRepository from '../repositories/phoneRepository.js';
-import { CreatePhoneData, Phone, PhoneWithCarrier } from '../protocols/index.js';
-import { AppError } from '../middlewares/errorHandler.js';
+import * as phoneRepository from '../repositories/phoneRepository';
+import { CreatePhoneData, Phone, PhoneWithCarrier } from '../protocols/index';
+import { AppError } from '../middlewares/errorHandler';
 
 export async function createPhone(phoneData: CreatePhoneData): Promise<Phone> {
   // Verificar se o número já existe

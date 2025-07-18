@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import * as summaryService from '../services/summaryService.js';
+import * as summaryService from '../services/summaryService';
 
 export async function getSummaryByDocument(req: Request, res: Response, next: NextFunction) {
   try {

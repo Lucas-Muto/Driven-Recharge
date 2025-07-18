@@ -1,5 +1,5 @@
-import database from '../config/database.js';
-import { Recharge, CreateRechargeData } from '../protocols/index.js';
+import database from '../config/database';
+import { Recharge, CreateRechargeData } from '../protocols/index';
 
 export async function createRecharge(rechargeData: CreateRechargeData): Promise<Recharge> {
   const query = `

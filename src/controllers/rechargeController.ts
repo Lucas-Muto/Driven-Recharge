@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
-import * as rechargeService from '../services/rechargeService.js';
-import { CreateRechargeData } from '../protocols/index.js';
+import * as rechargeService from '../services/rechargeService';
+import { CreateRechargeData } from '../protocols/index';
 
 export async function createRecharge(req: Request, res: Response, next: NextFunction) {
   try {
