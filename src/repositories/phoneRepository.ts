@@ -59,7 +59,16 @@ export async function findPhonesByDocument(document: string): Promise<PhoneWithC
     ORDER BY p.id
   `;
   
-  const result = await database.query(query, [document]);
+  const result = await database.query<{
+    id: number;
+    number: string;
+    name: string;
+    description: string;
+    document: string;
+    carrier_id: number;
+    carrier_name: string;
+    carrier_code: number;
+  }>(query, [document]);
   
   return result.rows.map(row => ({
     id: row.id,

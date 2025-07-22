@@ -127,6 +127,22 @@ Retorna consolidado com todos os telefones e recargas de um CPF.
 }
 ```
 
+## 🌐 Deploy
+
+**Link da API em produção:** [Aguardando deploy no Render]
+
+### Como fazer o deploy no Render:
+
+1. **Suba o projeto para o GitHub** (se ainda não fez)
+2. **No Render:**
+   - Crie um novo Web Service
+   - Vincule ao seu repositório GitHub
+   - Configure:
+     - **Build Command:** `npm i && npm run build`
+     - **Start Command:** `npm start`
+3. **Aguarde o deploy** e copie o link gerado
+4. **Atualize este README** com o link da API
+
 ## 🗄️ Banco de Dados
 
 O projeto utiliza PostgreSQL. Execute o script SQL em `src/database/sql/schema.sql` para criar as tabelas necessárias.

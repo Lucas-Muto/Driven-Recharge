@@ -1,6 +1,5 @@
 import Joi from 'joi';
 import { CreatePhoneData, CreateRechargeData } from '../protocols';
-import { ExtractType } from 'joi-extract-type';
 
 export const createPhoneSchema = Joi.object({
   number: Joi.string()
@@ -65,5 +64,6 @@ export const createRechargeSchema = Joi.object({
     })
 });
 
-export type CreatePhoneSchemaType = ExtractType<typeof createPhoneSchema>;
-export type CreateRechargeSchemaType = ExtractType<typeof createRechargeSchema>;
+// Tipos baseados nos schemas Joi para garantir consistência com TypeScript
+export type CreatePhoneSchemaType = CreatePhoneData;
+export type CreateRechargeSchemaType = CreateRechargeData;
