@@ -129,11 +129,11 @@ Retorna consolidado com todos os telefones e recargas de um CPF.
 
 ## 🌐 Deploy
 
-**Link da API em produção:** [Aguardando deploy no Render]
+**Link da API em produção:** https://driven-recharge-9qa9.onrender.com
 
 ### Como fazer o deploy no Render:
 
-1. **Suba o projeto para o GitHub** (se ainda não fez)
+1. **Suba o projeto para o GitHub**
 2. **No Render:**
    - Crie um novo Web Service
    - Vincule ao seu repositório GitHub
