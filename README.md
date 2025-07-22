@@ -129,7 +129,7 @@ Retorna consolidado com todos os telefones e recargas de um CPF.
 
 ## 🌐 Deploy
 
-**Link da API em produção:** https://driven-recharge-9qa9.onrender.com
+**Link da API em produção:** https://driven-recharge-9qa9.onrender.com/health
 
 ### Como fazer o deploy no Render:
 
