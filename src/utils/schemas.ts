@@ -1,4 +1,6 @@
 import Joi from 'joi';
+import { CreatePhoneData, CreateRechargeData } from '../protocols';
+import { ExtractType } from 'joi-extract-type';
 
 export const createPhoneSchema = Joi.object({
   number: Joi.string()
@@ -61,4 +63,7 @@ export const createRechargeSchema = Joi.object({
       'number.max': 'Amount cannot exceed R$1000',
       'any.required': 'Amount is required'
     })
-}); 
+});
+
+export type CreatePhoneSchemaType = ExtractType<typeof createPhoneSchema>;
+export type CreateRechargeSchemaType = ExtractType<typeof createRechargeSchema>;

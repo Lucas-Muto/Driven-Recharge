@@ -10,7 +10,7 @@ export async function createRecharge(rechargeData: CreateRechargeData): Promise<
   
   const values = [rechargeData.phoneId, rechargeData.amount];
   
-  const result = await database.query(query, values);
+  const result = await database.query<Recharge>(query, values);
   return result.rows[0];
 }
 
@@ -27,7 +27,7 @@ export async function findRechargesByPhoneNumber(phoneNumber: string): Promise<R
     ORDER BY r.timestamp DESC
   `;
   
-  const result = await database.query(query, [phoneNumber]);
+  const result = await database.query<Recharge>(query, [phoneNumber]);
   return result.rows;
 }
 
@@ -43,6 +43,6 @@ export async function findRechargesByPhoneId(phoneId: number): Promise<Recharge[
     ORDER BY timestamp DESC
   `;
   
-  const result = await database.query(query, [phoneId]);
+  const result = await database.query<Recharge>(query, [phoneId]);
   return result.rows;
 } 

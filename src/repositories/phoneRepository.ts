@@ -16,7 +16,7 @@ export async function createPhone(phoneData: CreatePhoneData): Promise<Phone> {
     phoneData.document
   ];
   
-  const result = await database.query(query, values);
+  const result = await database.query<Phone>(query, values);
   return result.rows[0];
 }
 
@@ -27,7 +27,7 @@ export async function findPhoneByNumber(number: string): Promise<Phone | null> {
     WHERE number = $1
   `;
   
-  const result = await database.query(query, [number]);
+  const result = await database.query<Phone>(query, [number]);
   return result.rows[0] || null;
 }
 
@@ -38,7 +38,7 @@ export async function findPhoneById(id: number): Promise<Phone | null> {
     WHERE id = $1
   `;
   
-  const result = await database.query(query, [id]);
+  const result = await database.query<Phone>(query, [id]);
   return result.rows[0] || null;
 }
 
@@ -82,7 +82,7 @@ export async function countPhonesByDocument(document: string): Promise<number> {
     WHERE document = $1
   `;
   
-  const result = await database.query(query, [document]);
+  const result = await database.query<{ count: string }>(query, [document]);
   return parseInt(result.rows[0].count);
 }
 
@@ -93,6 +93,6 @@ export async function carrierExists(carrierId: number): Promise<boolean> {
     WHERE id = $1
   `;
   
-  const result = await database.query(query, [carrierId]);
+  const result = await database.query<{ id: number }>(query, [carrierId]);
   return result.rows.length > 0;
 } 
